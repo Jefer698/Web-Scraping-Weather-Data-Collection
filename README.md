@@ -2,5 +2,5 @@
 
 # Solemne I Optativo de Especialidad IV
 
-Alumno: Jefersson Muñoz Zapata
-Profesor: Cristian Hernandez
+- Alumno: Jefersson Muñoz Zapata
+- Profesor: Cristian Hernandez
