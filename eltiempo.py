@@ -41,6 +41,12 @@ WebDriverWait(driver, 5)\
     .click()
 time.sleep(2)
 
+driver.execute_script("window.open('');")
+driver.switch_to.window(driver.window_handles[1])
+
+driver.get('https://www.accuweather.com/es/cl/santiago/60449/weather-forecast/60449')
+time.sleep(2)
+
 WebDriverWait(driver, 5)\
     .until(EC.element_to_be_clickable((By.XPATH,
                                       '/html/body/div/div[3]/div/div[3]/a[2]')))\
@@ -77,7 +83,7 @@ time.sleep(2)
 
 print('----------------------------')
 driver.execute_script("window.open('');")
-driver.switch_to.window(driver.window_handles[1])
+driver.switch_to.window(driver.window_handles[2])
 
 driver.get('https://eltiempo.es')
 time.sleep(2)
@@ -141,7 +147,7 @@ df2.to_csv('tiempo_por_hoy_tiempoes.csv',index=False)
 
 print('----------------------------')
 driver.execute_script("window.open('');")
-driver.switch_to.window(driver.window_handles[2])
+driver.switch_to.window(driver.window_handles[3])
 
 driver.get('https://www.tutiempo.net/')
 time.sleep(2)
@@ -160,10 +166,17 @@ time.sleep(2)
 driver.find_element_by_xpath('/html/body/div[3]/div/form/input').send_keys(Keys.ENTER)
 time.sleep(2)
 
+
 WebDriverWait(driver, 10)\
     .until(EC.element_to_be_clickable((By.XPATH,
                                       '/html/body/div[4]/div[5]/div[1]/div/p[2]/a[9]')))\
     .click()
+time.sleep(2)
+
+driver.execute_script("window.open('');")
+driver.switch_to.window(driver.window_handles[4])
+
+driver.get('https://www.tutiempo.net/santiago.html')
 time.sleep(2)
 
 WebDriverWait(driver, 10)\
